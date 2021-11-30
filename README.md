@@ -1,4 +1,31 @@
-# Flask SQLite full-stack-Python template
-A web app in Flask that allows via web form to enter a username.<br>
-The backend saves it with the date of the day and an auto-incrementing ID and saves it to a local SQLite DB.<br>
-Work in progress: get the list of all users via password. 
+    []: # Language: markdown
+    []: # Path: flask_db\README.md
+
+## Info
+
+Adesso funziona tutto e anche abbastanza bene, bello pulito.
+Da capire se vale la pena far vedere tutti gli utenti inseriti, magari inserendo una password? 
+Potrebbe essere interessante.
+
+
+### Records for SQLite
+
+Create the table:
+
+`
+CREATE TABLE users (
+    entry_date varchar (20) NOT NULL,
+    user varchar (20) NOT NULL
+);
+`
+    
+Get the table data with auto increment id feature from SQLite:
+
+`
+SELECT
+   rowid,
+   entry_date,
+   user
+FROM
+   users;
+`
