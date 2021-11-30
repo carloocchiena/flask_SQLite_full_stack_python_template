@@ -1,11 +1,7 @@
-    []: # Language: markdown
-    []: # Path: flask_db\README.md
+
 
 ## Info
 
-Adesso funziona tutto e anche abbastanza bene, bello pulito.
-Da capire se vale la pena far vedere tutti gli utenti inseriti, magari inserendo una password? 
-Potrebbe essere interessante.
 
 
 ### Records for SQLite
