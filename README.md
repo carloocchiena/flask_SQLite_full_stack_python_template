@@ -7,7 +7,7 @@ The backend saves it with the date of the day and an auto-incrementing ID and sa
 
 ### Records for SQLite
 
-Create the table:<br><br>
+Create the table:<br>
 
 CREATE TABLE users (<br>
     entry_date varchar (20) NOT NULL,<br>
@@ -15,8 +15,7 @@ CREATE TABLE users (<br>
 );<br>
 
     
-Get the table data with auto increment id feature from SQLite:<br><br>
-
+Get the table data with auto increment id feature from SQLite:<br>
 
 SELECT<br>
    rowid,<br>
