@@ -10,19 +10,19 @@ The backend saves it with the date of the day and an auto-incrementing ID and sa
 Create the table:
 
 `
-CREATE TABLE users (
-    entry_date varchar (20) NOT NULL,
-    user varchar (20) NOT NULL
-);
+CREATE TABLE users (<br>
+    entry_date varchar (20) NOT NULL,<br>
+    user varchar (20) NOT NULL<br>
+);<br>
 `
     
 Get the table data with auto increment id feature from SQLite:
 
 `
-SELECT
-   rowid,
-   entry_date,
-   user
-FROM
-   users;
+SELECT<br>
+   rowid,<br>
+   entry_date,<br>
+   user<br>
+FROM<br>
+   users;<br>
 `
