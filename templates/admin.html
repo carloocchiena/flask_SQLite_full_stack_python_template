@@ -14,11 +14,24 @@
 
 <body>
 	<div class="container">
-		<h3>Enter Admin Password</h3>
+		<h3 id="top">Retrieve all users</h3>
+		<p>Enter admin password:</p>
 		<form method="post">
 			<p><input name="password" placeholder="*******"/></p>
 			<p><input type="submit" value="Insert" /></p>
-		</form>		
+		</form>
+
+		{% for user in user_list %}
+			<p>{{ user[0] }}  {{ user[1] }}  {{ user[2] }}</p>
+		{% endfor %}
+
+		<p>{{ invalid }}</p>
+		
 	</div>
+
+	<div class= "box">
+        <button class="btn btn-outline-primary"><a href="#top">Back to top!</a></button>
+    </div>
+
 </body>              
 </html>

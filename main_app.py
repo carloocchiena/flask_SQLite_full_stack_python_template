@@ -2,33 +2,34 @@ from datetime import date
 
 from flask import Flask, request, render_template
 
-from insert_user import insert_user
+from manage_user import insert_user, retrieve_users
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
+
+PASSWORD = "admin"
 
 # render error page 404
 @app.errorhandler(404)
 def page_not_found(e):
     return "<h1>OOPS</h1> <p> Page not found </p>", 404
 
-# render admin page # ok siamo arriva qui, a validare la password
+# render admin page
 @app.route('/admin', methods = ["GET", "POST"])
 def admin():
+    
+    user_list = ""
+    invalid = ""
     
     if request.method == "POST":
         psw = request.form['password']
         
-    """
-    def api_all():
-    conn = sqlite3.connect(DB)
-    conn.row_factory = dict_factory
-    cur = conn.cursor()
-    all_album = cur.execute("SELECT * FROM album;").fetchall()
-    
-    return jsonify(all_album)
-    """
-    return render_template("admin.html")
+        if psw == PASSWORD:
+            user_list = retrieve_users()
+        else:
+            invalid = "[!!!] Wrong password"
+  
+    return render_template("admin.html", user_list = user_list, invalid=invalid)
 
 # render main page
 @app.route('/', methods = ["GET", "POST"])

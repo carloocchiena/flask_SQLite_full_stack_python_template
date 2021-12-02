@@ -19,11 +19,11 @@
 		<p>Enter a user name:</p>
 		<form method="post" action=".">
 			<p><input name="user" placeholder="Bill Gates"/></p>
-			<p>Today Date: {{today}}</p>
+			<p>Today Date: {{ today }}</p>
 			<p><input type="submit" value="Insert" /></p>
 		</form>
 		
-		<p>{{errors}}</p>
+		<p>{{ errors }}</p>
 
 		<a href="{{ url_for('admin') }}">Admin page</a>
 		
