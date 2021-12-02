@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import date
 
-DB = "D:\\Carlo\\Python\\Scripts\\web_app\\flask_db\\users.db"
+DB = "users.db"
 TODAY = date.today()
 
 # connect to our database and insert a new user
